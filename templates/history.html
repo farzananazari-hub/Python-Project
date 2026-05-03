@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}History{% endblock %}
+{% block content %}
+<div class="card">
+  <h2>Borrow History</h2>
+  <table>
+    <tr><th>Book</th><th>Status</th></tr>
+    {% for r in records %}
+    <tr>
+      <td>{{ r.title }}</td><td>{{ r.status }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}
